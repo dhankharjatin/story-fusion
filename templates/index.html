@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for( 'static', filename='css.css') }}">
+    </head>
+    <body>
+        <nav>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#writing">Start Writing</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </nav>
+        <div class="container">
+
+            <div id="home">
+          
+                <div id="main"><h1>Story Fusion</h1></div>
+            
+                <div id="tag"><h3 >Collaborate, Create, Connect!</h3></div>
+
+                <div id="homepara"><p >Story Fusion is a unique online space that brings together people from all walks of life to collectively craft compelling narratives. Whether you're a seasoned writer, a budding storyteller, or simply someone with a passion for creativity, our platform offers you the opportunity to collaborate with others and co-create captivating stories.<p>
+                
+                <p>Here, you can start a story and invite others to contribute, or jump into existing stories and add your own twists and turns. From fantasy realms to sci-fi adventures, horror sagas to mystery thrillers, the possibilities are endless.</p></div>
+            </div>
+
+
+            <div id="image">
+                <img src="https://t4.ftcdn.net/jpg/05/68/97/69/360_F_568976963_kXRxj3lbnCFgfQckKyVDvVLmQtzXUU2E.jpg" alt="">
+            </div>
+
+
+            <div id="about">
+                <div id="about1">
+                    <h1>About us</h1>
+                    <p>Welcome to Story Fusion, where storytelling becomes a collaborative adventure! At Story Fusion, we believe in the power of collective creativity, where individuals from diverse backgrounds come together to weave captivating narratives.!</p>
+                    <p>
+                        Our platform is designed to foster a community of writers, storytellers, and dreamers who share a passion for storytelling. Whether you're an experienced writer looking to collaborate on a new project or someone who simply loves to contribute to evolving tales, Story Fusion provides the perfect space for you.
+                    </p>
+                </div>
+                <div id="about2">
+                    <p>
+                        Here's what sets us apart:
+                    </p>
+                    <p>
+                        1. Collaborative Storytelling: Break the boundaries of traditional storytelling by collaborating with others to complete and expand upon existing stories. Our platform encourages teamwork and imagination to create unique and engaging narratives.
+                    </p>
+                    <p>
+                        2. Diverse Perspectives: Embrace the richness of diverse perspectives as individuals from all walks of life come together to share their stories. Discover new cultures, ideas, and voices that enrich the storytelling experience.
+                    </p>
+                    <p>    
+                        3. Interactive Platform: Engage with fellow storytellers through interactive features such as commenting, liking, and sharing. Connect with like-minded individuals, receive feedback, and build lasting relationships within our vibrant community.
+                    </p>
+                    <p>
+                        4. Inspiration and Exploration: Find inspiration and unleash your creativity with a wide range of story prompts, themes, and genres. Explore new storytelling styles, experiment with different plot twists, and push the boundaries of your imagination.
+                    </p>
+                    <p>
+                        5. Safe and Supportive Environment: Enjoy a safe and supportive environment where creativity flourishes without fear of judgment. Our community guidelines promote respect, inclusivity, and constructive feedback, ensuring a positive experience for all members.
+                    </p>
+                </div>
+            </div>
+
+            <div id="writing">
+                <div id="writingcenter">
+                    <h1>Start Writing</h1>
+                    <h2>Select a genre</h2>
+                </div>
+                <div id="genre">
+                    <div class="gi"><a href="{{ url_for('fiction') }}">Fiction</a></div>
+                    <div class="gi"><a href="{{ url_for('scifi') }}">Sci-Fi</a></div>
+                    <div class="gi"><a href="{{ url_for('horror') }}">Horror</a></div>
+                    <div class="gi"><a href="{{ url_for('mystery') }}">Mystery</a></div>
+                </div>
+            </div>
+
+
+            
+
+
+            <div id="contact">
+                <div id="ch"><h1>Contact Us</h1></div>
+                
+                
+            </div>
+
+
+        </div>
+    </body>
+</html>

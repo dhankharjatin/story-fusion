@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            width: 98vw;
+        }
+
+        nav{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            height: 70px;
+            grid-template-columns: repeat(4,100px);
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            
+            padding: 5px;
+            border-radius: 20px;
+            color: rgb(185, 182, 182) ;
+            
+            
+        }
+        a:hover{
+            color: white;
+        }
+        .area{
+            color: white;
+            display: grid;
+            
+
+        }
+        textarea{
+            border-radius: 20px;
+            color: white;
+            background-color: black;
+        }
+        #storypara{
+            border: 2px solid white;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            color: rgb(255, 255, 255);
+            margin:10px;
+        }
+        #last{
+            border: 2px solid white;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            color: rgb(255, 255, 255);
+            margin:10px;
+        }
+        .b{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li><a href="{{ url_for('main') }}">Home</a></li>
+        <li><a href="{{ url_for('main') }}">About Us</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="{{ url_for('main') }}">Contact us</a></li>
+    </nav>
+    <div class="area">
+
+        <div><h2>{{title}}</h2> </div>
+            <div id="storypara">
+                {% set i = prompt.split('\n') %}
+                {% for j in i %}
+                    <p>{{j}}</p>
+                {% endfor %}
+            </div>
+
+        <div id="last">
+            {% for i in input_text %}
+                <p>{{i}}</p>
+            {% endfor %}
+        </div>
+
+        <form action="{{ url_for('display') }}" method="post">
+        <div><textarea rows="30" cols="203" placeholder="Continue this story" name="story_input"></textarea></div>
+
+        <div class="b">
+            <input type="submit" value="submit">
+        </div>
+        </form>
+
+    </div>
+</body>
+</html>
